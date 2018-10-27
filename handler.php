@@ -20,7 +20,7 @@ if(isset($_POST['username'], $_POST['password'])){
          * Since its path is / 
          */
 		$sessionIdentifier = base64_encode(openssl_random_pseudo_bytes(32));
-        setcookie("sessionID", $sessionIdentifier);
+        setcookie("sessionID", $sessionIdentifier, 0, "/");
         
 		/***
          * Here we generate a Token to be used as the CSRF token
