@@ -4,7 +4,7 @@
         $valid_request = false;
         if(isset($_COOKIE['tokenID'])){
             if($_COOKIE['tokenID'] == $_POST['csrfToken']){
-                $$valid_request = true;
+                $valid_request = true;
             }
         }
     }
@@ -15,10 +15,6 @@
 <html lang="en">
 
 <?php include 'head.php';?>
-
-<script>
-</script>
-
 <body>
 
     <?php include 'common.php';?>
